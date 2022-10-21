@@ -11,6 +11,7 @@ import Series from "./components/Series";
 import Movies from "./components/Movies";
 import EpisodeDetails from "./components/EpisodeDetails";
 import Register from "./components/Register";
+import Login from "./components/Login";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/search" element={<Search />}></Route>
                     <Route path="/watch" element={<Watch />}></Route>
                     <Route path="/tv" element={<Tv />}></Route>
+                    <Route path="/login" element={<Login />}></Route>
                     <Route path="/movies" element={<Movies />}></Route>
                     <Route path="/Series" element={<Series />}></Route>
                     <Route
