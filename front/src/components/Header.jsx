@@ -1,11 +1,16 @@
 import logo from "../assets/Yakyak11111.png";
 
 const Header = () => {
+    // logout function
+    const logout = () => {
+        localStorage.removeItem("token");
+    };
+
     return (
-        <nav class="navbar navbar-dark navbar-expand-lg ">
-            <div class="container-fluid">
+        <nav className="navbar navbar-dark navbar-expand-lg ">
+            <div className="container-fluid">
                 <a
-                    class="navbar-brand mt-1"
+                    className="navbar-brand mt-1"
                     href="/"
                     style={{
                         width: "150px",
@@ -20,7 +25,7 @@ const Header = () => {
                     />
                 </a>
                 <button
-                    class="navbar-toggler "
+                    className="navbar-toggler "
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
@@ -28,41 +33,85 @@ const Header = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                    class="collapse navbar-collapse"
+                    className="collapse navbar-collapse"
                     id="navbarSupportedContent"
                 >
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/movies   ">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-1">
+                        <li className="nav-item">
+                            <a className="nav-link" href="/movies   ">
                                 Movies
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/series">
+                        <li className="nav-item">
+                            <a className="nav-link" href="/series">
                                 Series
                             </a>
                         </li>
 
-                        {/* <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Link
+                        <li className="nav-item">
+                            <a
+                                className="nav-link"
+                                href={
+                                    localStorage.token ? "/watchlist" : "/login"
+                                }
+                            >
+                                Watchlist
+                                <i className="fas fa-heart ms-2 text-danger"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Link
-                            </a>
-                        </li> */}
                     </ul>
-                    <div class="ben d-flex" role="search">
+                    <div className="ben d-flex" role="search">
                         <a href="/search">
-                            <button class="btn btn-outline-light">
-                                Search <i class="bi bi-search text-light"></i>
+                            <button className="btn btn-outline-light me-3">
+                                Search{" "}
+                                <i className="bi bi-search text-light"></i>
                             </button>
                         </a>
+                        {localStorage.token ? (
+                            <div className="dropdown">
+                                <button
+                                    className="btn btn-outline-light dropdown-toggle"
+                                    type="button"
+                                    id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    {localStorage.token}
+                                </button>
+                                <ul
+                                    className="dropdown-menu"
+                                    aria-labelledby="dropdownMenuButton1"
+                                >
+                                    <li>
+                                        <a
+                                            className="dropdown-item"
+                                            href="/profile"
+                                        >
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            className="dropdown-item"
+                                            href="/"
+                                            onClick={logout}
+                                        >
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        ) : (
+                            <a href="/login">
+                                <button className="btn btn-outline-light">
+                                    Sign in{" "}
+                                    <i className="bi bi-person text-light"></i>
+                                </button>
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>
