@@ -59,6 +59,7 @@ app.post("/api/users/login", async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
+            favorites: user.favorites,
         });
     }
 });

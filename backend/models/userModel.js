@@ -15,6 +15,11 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        favorites: {
+            type: Array,
+            default: [113988, 94997],
+            required: false,
+        },
     },
     {
         timestamps: true,

@@ -29,6 +29,7 @@ export default function Login() {
         // if success then redirect to home page
         if (data.name) {
             localStorage.setItem("token", data.email);
+            localStorage.setItem("favorites", data.favorites);
             window.location.href = "/";
         }
     };

@@ -27,9 +27,12 @@ function Register() {
             setError(data.message);
         } else {
             setError("");
+            // if success then redirect to home page
+            if (data.name) {
+                localStorage.setItem("token", data.email);
+                window.location.href = "/";
+            }
         }
-
-        console.log(data);
     };
 
     return (

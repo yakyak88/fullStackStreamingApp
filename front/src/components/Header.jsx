@@ -55,10 +55,10 @@ const Header = () => {
                             <a
                                 className="nav-link"
                                 href={
-                                    localStorage.token ? "/watchlist" : "/login"
+                                    localStorage.token ? "/Favorites" : "/login"
                                 }
                             >
-                                Watchlist
+                                Favorites
                                 <i className="fas fa-heart ms-2 text-danger"></i>
                             </a>
                         </li>
