@@ -15,9 +15,10 @@ const Series = () => {
                 {imgsArr.results &&
                     imgsArr.results.map((img) => {
                         const literallyImg = img.poster_path;
-                        console.log(imgsArr);
+
                         return (
                             <Link
+                                key={img.id}
                                 to="/tv"
                                 state={{
                                     id: img.id,
@@ -30,6 +31,7 @@ const Series = () => {
                                         "https://image.tmdb.org/t/p/w500" +
                                         literallyImg
                                     }
+                                    id={img.id}
                                 ></Card>
                             </Link>
                         );

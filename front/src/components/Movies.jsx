@@ -14,13 +14,14 @@ const Movies = () => {
                 {movieDetails.results &&
                     movieDetails.results.map((movie) => {
                         const posterId = movie.poster_path;
-                        console.log(movieDetails);
+                        // console.log(movieDetails);
                         return (
                             <Link
+                                key={movie.id}
                                 to="/watch"
                                 state={{
                                     details: movie,
-                                    handleAddToFavorites: useAddToFavorites,
+
                                     type: "movie",
                                 }}
                             >

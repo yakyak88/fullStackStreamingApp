@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import React from "react";
 
 // react component to display the details of the movie or tv show that the user clicked on
 const Watch = () => {

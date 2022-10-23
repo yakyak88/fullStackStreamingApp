@@ -12,8 +12,8 @@ const EpisodeDetails = () => {
     }, [type]);
 
     return (
-        <div className="container mt-5 text-light">
-            <div className="row">
+        <div className="container mt-2 text-light">
+            <div className="row mt-3">
                 <div className="col-12 col-md-4">
                     <img
                         src={

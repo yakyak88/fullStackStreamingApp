@@ -12,31 +12,38 @@ import Movies from "./components/Movies";
 import EpisodeDetails from "./components/EpisodeDetails";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
+import Footer from "./components/Footer";
 
 function App() {
     return (
         <div className="App ">
             <Router>
                 <Header></Header>
-                <Routes>
-                    <Route path="/home" element={<Home />}></Route>
-                    <Route path="/" element={<Home />}></Route>
-                    <Route path="/search" element={<Search />}></Route>
-                    <Route path="/watch" element={<Watch />}></Route>
-                    <Route path="/tv" element={<Tv />}></Route>
-                    <Route path="/login" element={<Login />}></Route>
-                    <Route path="/movies" element={<Movies />}></Route>
-                    <Route path="/Series" element={<Series />}></Route>
-                    <Route
-                        path="/episosedetails"
-                        element={<EpisodeDetails />}
-                    ></Route>
-                    <Route path="/register" element={<Register />}></Route>
-                    <Route
-                        path="/episodes"
-                        element={<Episodes></Episodes>}
-                    ></Route>
-                </Routes>
+                <main>
+                    <Routes>
+                        <Route path="/home" element={<Home />}></Route>
+                        <Route path="/" element={<Home />}></Route>
+                        <Route path="/search" element={<Search />}></Route>
+                        <Route path="/watch" element={<Watch />}></Route>
+                        <Route path="/tv" element={<Tv />}></Route>
+                        <Route path="/login" element={<Login />}></Route>
+                        <Route path="/movies" element={<Movies />}></Route>
+                        <Route path="/Series" element={<Series />}></Route>
+                        <Route path="/profile" element={<Profile />}></Route>
+                        <Route
+                            path="/episosedetails"
+                            element={<EpisodeDetails />}
+                        ></Route>
+                        <Route path="/register" element={<Register />}></Route>
+                        <Route
+                            path="/episodes"
+                            element={<Episodes></Episodes>}
+                        ></Route>
+                    </Routes>
+                </main>
+
+                <Footer></Footer>
             </Router>
         </div>
     );

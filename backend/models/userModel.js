@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
         },
         favorites: {
             type: Array,
-            default: [113988, 94997],
+            default: [113988, 642885],
             required: false,
         },
     },

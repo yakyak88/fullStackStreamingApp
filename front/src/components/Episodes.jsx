@@ -19,7 +19,7 @@ const Episodes = () => {
     }, []);
 
     return (
-        <div className="container mt-5  ">
+        <div className="container mt-2  ">
             <div className="container mb-4">
                 <div className="row ">
                     <div className="my-auto col-6 text-start">
@@ -40,14 +40,13 @@ const Episodes = () => {
                             "https://image.tmdb.org/t/p/w500" +
                             location.state.img
                         }
-                        height="400vh"
                     />
                 </div>
             </div>
             <div className="row row-cols-lg-5 row-cols-md-4 row-cols-2">
                 {episodes.episodes &&
                     episodes.episodes.map((episode) => {
-                        console.log(episode);
+                        // console.log(episode);
                         return (
                             <>
                                 <Link

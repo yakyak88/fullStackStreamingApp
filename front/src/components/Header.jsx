@@ -4,6 +4,8 @@ const Header = () => {
     // logout function
     const logout = () => {
         localStorage.removeItem("token");
+        window.location.href = "/";
+        localStorage.removeItem("favorites");
     };
 
     return (

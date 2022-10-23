@@ -13,7 +13,7 @@ const Search = () => {
             `https://api.themoviedb.org/3/search/multi?api_key=692ad17fefe3f279a5bc0dfa87752845&language=en-US&page=1&include_adult=true&query=${inpVal}`
         );
         const moviesArr = response.data.results;
-        console.log(moviesArr);
+        // console.log(moviesArr);
         setSearchArr(moviesArr);
     }
     return (
